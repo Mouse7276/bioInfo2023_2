@@ -7,3 +7,6 @@ import crossover
 import mutation
 import functions
 
+
+
+
