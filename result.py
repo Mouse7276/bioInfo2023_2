@@ -24,3 +24,4 @@ print('Tm: ', variables.getDNAMeltingTemp(P1), '\n')
 print('GC content: ', variables.getDNAGCContent(P1), '\n')
 print('annealing position appearance: ', variables.checkDNAAnnealingPositionAppearance(P1, seq), '\n')
 print('3\' end primer: ', variables.checkDNA3EndPrimer(P1), '\n')
+
