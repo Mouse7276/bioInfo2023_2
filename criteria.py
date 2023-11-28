@@ -8,10 +8,6 @@ import mutation
 import crossover
 
 # The proposed algorithm for PCR the primer design
-# Function to generate random 500 solutions Pt 
-def generateRandomSolutions ():  
-    return
-
 # Function to length check of Pt
 def lengthCheckPt (Pt):
     return

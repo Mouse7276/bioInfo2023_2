@@ -8,10 +8,19 @@ import criteria
 import mutation
 import crossover
 
-# Create variables
-Gd = variables.createDNASeq(60)
-Gd_ = Gd.complement()
+# Create variable
+seq = variables.createDNASeq(500)
+Pt = variables.createPt(seq)
+PtPrime = variables.createPtPrime(Pt)
+P1 = variables.getP1(seq, Pt)
 
-# Test functions
-print("Gd: " + str(Gd) + "\n")
-print("Gd_: " + str(Gd_) + "\n")
+# Print result
+print('sequence: ', seq, '\n')
+print('Pt: ', Pt, '\n')
+print('Pt\': ', PtPrime, '\n')
+print('P1: ', P1, '\n')
+print('length: ', variables.getDNALength(P1), '\n')
+print('Tm: ', variables.getDNAMeltingTemp(P1), '\n')
+print('GC content: ', variables.getDNAGCContent(P1), '\n')
+print('annealing position appearance: ', variables.checkDNAAnnealingPositionAppearance(P1, seq), '\n')
+print('3\' end primer: ', variables.checkDNA3EndPrimer(P1), '\n')
