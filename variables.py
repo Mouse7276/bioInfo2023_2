@@ -49,6 +49,9 @@ def createPtPrime (Pt):
 def getP1 (sequence, Pt):
     return sequence[Pt[0]:Pt[1]]
 
+def getP2 (sequence, Pt):
+    return sequence[Pt[2]:Pt[3]].reverse_complement()
+
 # Function to get the length of a DNA sequence
 def getDNALength (P1):
     return len(P1)
