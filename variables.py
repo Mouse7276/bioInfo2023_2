@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 
 import criteria
 import mutation
-import crossover
 
 # Definition of the proposed algorithm
 # Function to create a random DNA sequence of a given length
