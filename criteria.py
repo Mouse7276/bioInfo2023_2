@@ -44,8 +44,8 @@ def GCContentCheckPt (sequence, Pt):
 def specificityCheckPt (sequence, Pt):
     Bfseq = variables.getP1(sequence, Pt)
     Brseq = variables.getP2(sequence, Pt)
-    UniBf = variables.checkDNAAnnealingPositionAppearance(Bfseq)
-    UniBr = variables.checkDNAAnnealingPositionAppearance(Brseq)
+    UniBf = variables.checkDNAAnnealingPositionAppearance(Bfseq, sequence)
+    UniBr = variables.checkDNAAnnealingPositionAppearance(Brseq, sequence)
     return UniBf + UniBr
 
 def TerminationCheckPt (sequence, Pt):
@@ -73,7 +73,8 @@ def selfComplementarityCheckPt (sequence, Pt):
         if sum(diff) >= 3:
             return 1
     # self-self check
-    tempseq = Bfseq.reverse()
+    tempseq = Bfseq.reverse_complement()
+    tempseq = tempseq.complement()
     Bfcompseq = Bfseq.reverse_complement()
     Brcompseq = variables.getP1(sequence, Pt[2:])
     for i in range(3, len(Bfseq)):

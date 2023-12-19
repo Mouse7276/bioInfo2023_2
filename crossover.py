@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 import variables
 
-def crossoverPt(PtX,PtY):
+def crossoverPt(Ptx,Pty):
     # 어느 자리를 바꿀지 랜덤으로 정함
     R = []
     i = 0

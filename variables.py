@@ -41,6 +41,10 @@ def createPtPrime (Pt):
     ]
     return result
 
+def PtprimetoPt (Ptprime):
+    result = [Ptprime[0], Ptprime[0]+Ptprime[1], Ptprime[0]+Ptprime[1]+Ptprime[2], Ptprime[0]+Ptprime[1]+Ptprime[2]+Ptprime[3]]
+    return result
+
 # Function to get a P1 of a given DNA sequence
 def getP1 (sequence, Pt):
     return sequence[Pt[0]:Pt[1]]
@@ -60,6 +64,8 @@ def getDNAMeltingTemp (P1):
 
 # Function to get the GC content of a DNA sequence
 def getDNAGCContent (P1):
+    if len(P1) == 0:
+        return 0
     return 100* ((P1.count('G') + P1.count('C')) / len(P1))
 
 # Function to check annealing position appearance of a DNA sequence only one time
@@ -72,6 +78,8 @@ def checkDNAAnnealingPositionAppearance (P1, sequence):
 # Function to check 3' end of the primer of a DNA sequence is G or C
 def checkDNA3EndPrimer (P1):
     result = 1
+    if len(P1)<=1:
+        return result
     if P1[-1] == 'G' or P1[-1] == 'C':
         result = 0
     if P1[-2] == 'G' and P1[-1] == 'C':
