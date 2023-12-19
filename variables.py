@@ -3,9 +3,6 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-import criteria
-import mutation
-
 # Definition of the proposed algorithm
 # Function to create a random DNA sequence of a given length
 def createDNASeq (length):
